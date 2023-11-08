@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
             Movement();    
         }
         
-
         if(_gameManager._death == false)
         {
             Jump();
