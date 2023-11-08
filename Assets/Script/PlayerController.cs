@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 direction = new Vector3(_horizontal, 0, _vertical);
 
-        _animator.SetFloat("VelX", 0);    
+        //_animator.SetFloat("VelX", 0);    
         _animator.SetFloat("VelZ", direction.magnitude);
 
 
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
-            _controller.Move(direction * playerSpeed * Time.deltaTime);
+            _controller.Move(moveDirection * playerSpeed * Time.deltaTime);
         }
  
     }
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
        
         if(_isGrounded && _playerGravity.y < 0)
         {
-            _playerGravity.y = 0;
+            _playerGravity.y = -2;
         }
 
         if(_isGrounded && Input.GetButtonDown("Jump"))
