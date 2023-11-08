@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKey(KeyCode.P) &&  _gameManager._death == false)
             {
                 _gameManager.PlayerDeath();
-                //_animator.SetTrigger ("IsDeath");     
+                _animator.SetTrigger ("IsDeath");     
             }
         }
 }
