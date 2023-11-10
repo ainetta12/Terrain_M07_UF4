@@ -149,4 +149,12 @@ public class PlayerController : MonoBehaviour
                 _animator.SetTrigger ("IsDeath");     
             }
         }
+    
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(_sensorPosition.position, _sensorRadius);
+    }
+
 }
+
